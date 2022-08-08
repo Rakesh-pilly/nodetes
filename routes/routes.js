@@ -2,8 +2,15 @@ const express = require('express');
 const model = require('../models/model');
 const router = express.Router();
 // Get All API
+
+
+
+router.get('/', (req,res,next)=> {
+    res.status(200).json("this for the /api")
+})
+
 router.get('/getAll', (req, res)=> {
-    res.send('Getting all the data');
+    res.status(200).json("this for the /api/get")
 })
 
 // Get by ID API
